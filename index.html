@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sekai Drops</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="titles">
+            <div class="title">セカイドロップ確率プロジェクト</div>
+            <div class="title">Sekai Drop Rate Project</div>
+        </div>
+        <div class="rules">
+            <div class="rule">1. <b>みんなでライブで</b>曲が終わるたびに、1行目にSF以外で受けたアイテムをクリックしてください。
+                <br>
+                Whenever you complete a <b>Multi Live</b>, on the first line click all items you got (not from Super Fever).
+                <br>
+            </div>
+            <div class="rule">2. SFがあったら、2行目にSFで受けたアイテムをクリックしてください。
+                <br>
+                If Super Fever occurred, click the item you received from it on the second line.
+                <br>
+            </div>
+            <div class="rule">3. OKをクリックしてください。（1分1回だけできます）
+                <br>
+                Click OK. (Only one result can be submitted per minute.)
+                <br>
+            </div>
+        </div>
+        <div id="items">
+            <div id="itemsMain" class="itemRow"></div>
+            <div id="itemsSF" class="itemRow"></div>
+        </div>
+        <div id="submit" onclick="submit()">OK</div>
+    </div>
+</body></html>
