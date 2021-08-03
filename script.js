@@ -105,4 +105,5 @@ async function submit() {
     else {
         $("#error").show();
     }
+    clearItems();
 }
