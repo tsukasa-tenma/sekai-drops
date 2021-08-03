@@ -95,4 +95,25 @@ body {
     padding: 5px;
     font-size: 36px;
     cursor: pointer;
+    font-family: "Kazesawa-Bold";
+}
+
+#success, #error {
+    width: 200px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    font-size: 36px;
+    cursor: pointer;
+    font-family: "Kazesawa-Bold";
+    display: none;
+}
+
+#success {
+    color: #1d754f;
+}
+
+#error {
+    color: #c22b2b;
 }

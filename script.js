@@ -80,7 +80,9 @@ async function submit() {
     $("#submit").hide();
     setTimeout(function() {
         $("#submit").show();
-    }, 15000);
+        $("#success").hide();
+        $("#error").hide();
+    }, 60000);
     var data = {
         "time": new Date().toString(),
         "userid": userId 
@@ -97,5 +99,10 @@ async function submit() {
         dataType: "json",
         data: data
     });
-    console.log(jqxhr)
+    if (jqxhr.result == "success") {
+        $("#success").show();
+    }
+    else {
+        $("#error").show();
+    }
 }
