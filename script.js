@@ -24,8 +24,8 @@ function loadId() {
 }
 
 function initItems() {
-    initItemsRow("#itemsMain", itemList, false);
-    initItemsRow("#itemsSF", itemListSF, true);
+    initItemsRow("#itemsMain", itemList, false, 0);
+    initItemsRow("#itemsSF", itemListSF, true, itemList.length);
     itemsOn = [];
     for (let i=0; i<itemList.length; i++) {
         itemsOn.push(false);
@@ -33,10 +33,10 @@ function initItems() {
     itemSF = -1;
 }
 
-function initItemsRow(selector, items, isSF) {
+function initItemsRow(selector, items, isSF, tabIndex) {
     $(selector).empty();
     for (let i = 0; i < items.length; i++) {
-        $(selector).append(`<img class="${isSF ? "itemSF" : "item"} gray" item-id="${i}" draggable="false" onclick="itemClick(${i}, ${isSF})" src="./img/${items[i]}.png">`);
+        $(selector).append(`<img class="${isSF ? "itemSF" : "item"} gray" tabindex=${0} item-id="${i}" draggable="false" onclick="itemClick(${i}, ${isSF})" src="./img/${items[i]}.png">`);
     }
 }
 
@@ -54,7 +54,7 @@ function itemClick(id, isSF) {
 }
 
 function clearItems() {
-    for (let i = 0; itemsOn.length; i++) {
+    for (let i = 0; i < itemsOn.length; i++) {
         itemsOn[i] = false;
     }
     itemSF = -1;
