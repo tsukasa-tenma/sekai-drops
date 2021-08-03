@@ -57,7 +57,7 @@ function clearItems() {
     for (let i = 0; itemsOn.length; i++) {
         itemsOn[i] = false;
     }
-    itemSF = 0;
+    itemSF = -1;
     updateItems();
 }
 
